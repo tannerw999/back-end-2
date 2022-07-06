@@ -5,6 +5,7 @@ const app = express()
 app.use(express.json())
 app.use(cors())
 
+const {getHouses, updateHouse, createHouse, deleteHouse} = require("./controller.js")
 
 app.get("/api/houses", getHouses)
 app.put("/api/houses/:id", updateHouse)
